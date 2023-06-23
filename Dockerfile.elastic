@@ -23,5 +23,4 @@ RUN curl -L -o elastic-apm-agent.jar "https://oss.sonatype.org/service/local/art
 ENV ELASTIC_APM_SERVER_URL=${SERVER_URL}
 ENV ELASTIC_APM_SECRET_TOKEN=${SECRET_TOKEN}
 
-#CMD java -javaagent:/elastic-apm-agent.jar -Delastic.apm.service_name=my-service-2 -Delastic.apm.environment=my-environment -Delastic.apm.plugins_dir=/usr/local/lib -jar /usr/local/lib/simple-java-1.0-SNAPSHOT.jar
 CMD ["java", "-javaagent:/elastic-apm-agent.jar", "-Delastic.apm.service_name=my-service-2", "-Delastic.apm.environment=my-environment", "-Delastic.apm.plugins_dir=/usr/local/lib", "-jar", "/usr/local/lib/simple-java-1.0-SNAPSHOT.jar"]
