@@ -11,5 +11,5 @@ ELASTIC AGENT:
 
 docker build -t djhope99/custom-elastic-instrumentation:2 -f Dockerfile.elastic .
 
-docker run -it -e 'ELASTIC_APM_SERVER_URL=https://3b3c6ec7e6d84937bc2bb021d8b5ccf2.apm.us-central1.gcp.cloud.es.io:443' -e 'ELASTIC_APM_SECRET_TOKEN=UyFCxFiHgLjkromXuZ' djhope99/custom-elastic-instrumentation:2
+docker run -it -e 'ELASTIC_APM_SERVER_URL=XXX' -e 'ELASTIC_APM_SECRET_TOKEN=XXX' djhope99/custom-elastic-instrumentation:2
 
