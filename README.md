@@ -17,10 +17,10 @@ This repository provides an example of using custom instrumentation with OpenTel
     To build the Docker image, navigate to the root directory of this repository and run:
 
     ```
-    docker build -t simple-java-opentelemetry .
+    docker build -t djhope99/custom-otel-instrumentation:1 .
     ```
 
-    Replace `simple-java-opentelemetry` with your desired image name.
+    Replace `djhope99/custom-otel-instrumentation:1` with your desired image name.
 
 2. To run the Docker container, use the following command:
 
