@@ -25,7 +25,7 @@ This repository provides an example of using custom instrumentation with OpenTel
 2. To run the Docker container, use the following command:
 
     ```
-    docker run -e ENDPOINT_URL='YourEndpointURL' -e SECRET_KEY='YourSecretKey' simple-java-opentelemetry
+    docker run -it -e 'SERVER_URL=XXX' -e 'SECRET_KEY=XXX' djhope99/custom-otel-instrumentation:1
     ```
 
     Replace `YourEndpointURL` and `YourSecretKey` with your actual endpoint URL and secret key for the OpenTelemetry collector. Replace `simple-java-opentelemetry` with your image name if you chose a different name during build.
