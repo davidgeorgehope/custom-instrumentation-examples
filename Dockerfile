@@ -19,5 +19,7 @@ WORKDIR /
 
 RUN curl -L -o opentelemetry-javaagent.jar https://github.com/open-telemetry/opentelemetry-java-instrumentation/releases/latest/download/opentelemetry-javaagent.jar
 
-CMD ["java", "-javaagent:/opentelemetry-javaagent.jar", "-Dotel.exporter.otlp.endpoint=${ENDPOINT_URL}", "-Dotel.exporter.otlp.headers=Authorization=Bearer ${SECRET_KEY}", "-Dotel.metrics.exporter=otlp", "-Dotel.logs.exporter=otlp", "-Dotel.resource.attributes=service.name=simple-java,service.version=1.0,deployment.environment=production", "-Dotel.service.name=your-service-name", "-Dotel.javaagent.extensions=/usr/local/lib/opentelemetry-custom-instrumentation-1.0-SNAPSHOT.jar", "-Dotel.javaagent.debug=true", "-jar", "/usr/local/lib/simple-java-1.0-SNAPSHOT.jar"]
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
+ENTRYPOINT ["/start.sh"]
